@@ -1,0 +1,16 @@
+
+# Project
+.git
+node_modules
+
+# Source
+*.js
+*.d.ts
+/src/*.js
+/src/*d.ts
+/test/*.js
+/test/*.d.ts
+
+# Coverage
+/coverage
+/.nyc_output
