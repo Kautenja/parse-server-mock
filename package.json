@@ -1,6 +1,6 @@
 {
     "name": "parse-server-mock",
-    "version": "0.1.3",
+    "version": "0.2.0",
     "description": "a class for mocking requests and responses in parse servers",
     "main": "index.js",
     "types": "index.d.ts",

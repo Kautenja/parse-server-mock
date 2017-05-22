@@ -23,12 +23,21 @@ level.
 
 ## Features ##
 
+-   uses Chai for assertions
+-   built with TypeScript (types defined and included)
+
+### Fully Mocked Classes ###
+
+-   [x] Parse.Cloud.AfterDeleteRequest
+-   [x] Parse.Cloud.BeforeDeleteRequest
+-   [ ] Parse.Cloud.BeforeDeleteResponse
+-   [x] Parse.Cloud.AfterSaveRequest
+-   [x] Parse.Cloud.BeforeSaveRequest
+-   [ ] Parse.Cloud.BeforeSaveResponse
 -   [x] Parse.Cloud.FunctionRequest
 -   [x] Parse.Cloud.FunctionResponse
--   [ ] Parse.Cloud.BeforeDeleteRequest
--   [ ] Parse.Cloud.BeforeDeleteResponse
--   [ ] Parse.Cloud.BeforeSaveRequest
--   [ ] Parse.Cloud.BeforeSaveResponse
+-   [ ] Parse.Cloud.JobRequest
+-   [ ] Parse.Cloud.JobStatus
 
 ## Installation ##
 
@@ -43,3 +52,10 @@ npm install parse-server-mock --save-dev
 ### Mock.FunctionRequest ###
 
 ### Mock.FunctionResponse ###
+
+### Save / Delete Triggers ###
+
+1.  Mock.AfterDeleteRequest
+1.  Mock.BeforeDeleteRequest
+1.  Mock.AfterSaveRequest
+1.  Mock.BeforeSaveRequest
