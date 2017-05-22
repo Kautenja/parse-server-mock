@@ -1,2 +1,2 @@
 import {Mock} from './src';
-export default Mock;
+export {Mock};
