@@ -26,6 +26,9 @@
         "url": "https://github.com/Kautenja/arse-server-mock/issues"
     },
     "homepage": "https://github.com/Kautenja/arse-server-mock#readme",
+    "files": [
+        "src"
+    ],
     "dependencies": {
         "parse": "^1.9.2",
         "chai": "^3.5.0"
