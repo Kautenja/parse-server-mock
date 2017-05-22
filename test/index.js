@@ -4,3 +4,5 @@ var testMockFunctionRequest = require("./testMockFunctionRequest");
 exports.testMockFunctionRequest = testMockFunctionRequest;
 var testMockFunctionResponse = require("./testMockFunctionResponse");
 exports.testMockFunctionResponse = testMockFunctionResponse;
+var testMockTriggerRequest = require("./testMockTriggerRequest");
+exports.testMockTriggerRequest = testMockTriggerRequest;

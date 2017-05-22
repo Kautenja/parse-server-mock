@@ -19,7 +19,7 @@ describe('Mock.FunctionRequest.constructor()', () => {
         expect(entity.user).to.be.undefined;
     });
 
-    it('should initialize a response with "installationId" parameter', () => {
+    it('should initialize a request with "installationId" parameter', () => {
         var entity: FunctionRequest;
         // the function that will attemp to instantiate the request
         var attemptToInitialize = () => {
@@ -66,7 +66,7 @@ describe('Mock.FunctionRequest.constructor()', () => {
         expect(entity.user).to.be.undefined;
     });
 
-    it('should initialize a response with "user" parameter', () => {
+    it('should initialize a request with "user" parameter', () => {
         var entity: FunctionRequest;
         let user = new Parse.User();
         // the function that will attemp to instantiate the request
@@ -82,7 +82,7 @@ describe('Mock.FunctionRequest.constructor()', () => {
         expect(entity.user).to.equal(user);
     });
 
-    it('should initialize a response with all parameters', () => {
+    it('should initialize a request with all parameters', () => {
         var entity: FunctionRequest;
         let user = new Parse.User();
         // the function that will attemp to instantiate the request
