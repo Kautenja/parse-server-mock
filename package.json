@@ -1,6 +1,6 @@
 {
     "name": "parse-server-mock",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "description": "a class for mocking requests and responses in parse servers",
     "main": "index.js",
     "types": "index.d.ts",
@@ -27,7 +27,10 @@
     },
     "homepage": "https://github.com/Kautenja/arse-server-mock#readme",
     "files": [
-        "src"
+        "src",
+        "index.js",
+        "index.d.ts",
+        "index.ts"
     ],
     "dependencies": {
         "parse": "^1.9.2",
