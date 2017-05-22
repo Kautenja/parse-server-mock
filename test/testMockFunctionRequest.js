@@ -16,7 +16,7 @@ describe('Mock.FunctionRequest.constructor()', function () {
         chai_1.expect(entity.installationId).to.be.undefined;
         chai_1.expect(entity.user).to.be.undefined;
     });
-    it('should initialize a response with "installationId" parameter', function () {
+    it('should initialize a request with "installationId" parameter', function () {
         var entity;
         var attemptToInitialize = function () {
             entity = new FunctionRequest({
@@ -57,7 +57,7 @@ describe('Mock.FunctionRequest.constructor()', function () {
         chai_1.expect(entity.installationId).to.be.undefined;
         chai_1.expect(entity.user).to.be.undefined;
     });
-    it('should initialize a response with "user" parameter', function () {
+    it('should initialize a request with "user" parameter', function () {
         var entity;
         var user = new Parse.User();
         var attemptToInitialize = function () {
@@ -71,7 +71,7 @@ describe('Mock.FunctionRequest.constructor()', function () {
         chai_1.expect(entity.installationId).to.be.undefined;
         chai_1.expect(entity.user).to.equal(user);
     });
-    it('should initialize a response with all parameters', function () {
+    it('should initialize a request with all parameters', function () {
         var entity;
         var user = new Parse.User();
         var attemptToInitialize = function () {
