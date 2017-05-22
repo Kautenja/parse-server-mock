@@ -30,10 +30,10 @@ level.
 
 -   [x] Parse.Cloud.AfterDeleteRequest
 -   [x] Parse.Cloud.BeforeDeleteRequest
--   [ ] Parse.Cloud.BeforeDeleteResponse
+-   [x] Parse.Cloud.BeforeDeleteResponse
 -   [x] Parse.Cloud.AfterSaveRequest
 -   [x] Parse.Cloud.BeforeSaveRequest
--   [ ] Parse.Cloud.BeforeSaveResponse
+-   [x] Parse.Cloud.BeforeSaveResponse
 -   [x] Parse.Cloud.FunctionRequest
 -   [x] Parse.Cloud.FunctionResponse
 -   [ ] Parse.Cloud.JobRequest
@@ -47,7 +47,7 @@ To install the module locally (preferred) use:
 npm install parse-server-mock --save-dev
 ```
 
-## Usage ##
+<!-- ## Usage ##
 
 ### Mock.FunctionRequest ###
 
@@ -58,4 +58,4 @@ npm install parse-server-mock --save-dev
 1.  Mock.AfterDeleteRequest
 1.  Mock.BeforeDeleteRequest
 1.  Mock.AfterSaveRequest
-1.  Mock.BeforeSaveRequest
+1.  Mock.BeforeSaveRequest -->

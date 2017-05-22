@@ -11,28 +11,10 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var MockFunctionRequest_1 = require("./MockFunctionRequest");
-var MockFunctionResponse_1 = require("./MockFunctionResponse");
 var MockTriggerRequest_1 = require("./MockTriggerRequest");
+var MockResponse_1 = require("./MockResponse");
 var Mock;
 (function (Mock) {
-    var FunctionRequest = (function (_super) {
-        __extends(FunctionRequest, _super);
-        function FunctionRequest() {
-            return _super !== null && _super.apply(this, arguments) || this;
-        }
-        return FunctionRequest;
-    }(MockFunctionRequest_1.MockFunctionRequest));
-    Mock.FunctionRequest = FunctionRequest;
-    ;
-    var FunctionResponse = (function (_super) {
-        __extends(FunctionResponse, _super);
-        function FunctionResponse() {
-            return _super !== null && _super.apply(this, arguments) || this;
-        }
-        return FunctionResponse;
-    }(MockFunctionResponse_1.MockFunctionResponse));
-    Mock.FunctionResponse = FunctionResponse;
-    ;
     var AfterDeleteRequest = (function (_super) {
         __extends(AfterDeleteRequest, _super);
         function AfterDeleteRequest() {
@@ -60,6 +42,15 @@ var Mock;
     }(MockTriggerRequest_1.MockBeforeDeleteRequest));
     Mock.BeforeDeleteRequest = BeforeDeleteRequest;
     ;
+    var BeforeDeleteResponse = (function (_super) {
+        __extends(BeforeDeleteResponse, _super);
+        function BeforeDeleteResponse() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return BeforeDeleteResponse;
+    }(MockResponse_1.MockBeforeDeleteResponse));
+    Mock.BeforeDeleteResponse = BeforeDeleteResponse;
+    ;
     var BeforeSaveRequest = (function (_super) {
         __extends(BeforeSaveRequest, _super);
         function BeforeSaveRequest() {
@@ -68,6 +59,33 @@ var Mock;
         return BeforeSaveRequest;
     }(MockTriggerRequest_1.MockBeforeSaveRequest));
     Mock.BeforeSaveRequest = BeforeSaveRequest;
+    ;
+    var BeforeSaveResponse = (function (_super) {
+        __extends(BeforeSaveResponse, _super);
+        function BeforeSaveResponse() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return BeforeSaveResponse;
+    }(MockResponse_1.MockBeforeSaveResponse));
+    Mock.BeforeSaveResponse = BeforeSaveResponse;
+    ;
+    var FunctionRequest = (function (_super) {
+        __extends(FunctionRequest, _super);
+        function FunctionRequest() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return FunctionRequest;
+    }(MockFunctionRequest_1.MockFunctionRequest));
+    Mock.FunctionRequest = FunctionRequest;
+    ;
+    var FunctionResponse = (function (_super) {
+        __extends(FunctionResponse, _super);
+        function FunctionResponse() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return FunctionResponse;
+    }(MockResponse_1.MockFunctionResponse));
+    Mock.FunctionResponse = FunctionResponse;
     ;
 })(Mock = exports.Mock || (exports.Mock = {}));
 ;

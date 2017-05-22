@@ -1,9 +1,9 @@
 import * as testMockFunctionRequest from './testMockFunctionRequest';
-import * as testMockFunctionResponse from './testMockFunctionResponse';
 import * as testMockTriggerRequest from './testMockTriggerRequest';
+import * as testMockResponse from './testMockResponse';
 
 export {
     testMockFunctionRequest,
-    testMockFunctionResponse,
-    testMockTriggerRequest
+    testMockTriggerRequest,
+    testMockResponse
 };

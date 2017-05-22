@@ -2,8 +2,8 @@ import * as Parse from 'parse/node';
 import {expect} from 'chai';
 
 
-// the interface that defines the properties in FunctionResponse objects
-export type FunctionResponseProperties = {
+// the interface that defines the properties in MockResponse objects
+export type ResponseProperties = {
     // the success message
     readonly expectedSuccess?: any;
     // the expected error message
@@ -14,9 +14,9 @@ export type FunctionResponseProperties = {
 
 /**
  * A class for mocking parse cloud function responses.
- * @type {Parse.Cloud.FunctionResponse}
+ * @type {Parse.Cloud.MockResponse}
  */
-export class MockFunctionResponse implements Parse.Cloud.FunctionResponse {
+export class MockResponse {
 
     readonly expectedSuccess: any;
     readonly expectedError: string;
@@ -24,9 +24,9 @@ export class MockFunctionResponse implements Parse.Cloud.FunctionResponse {
 
     /**
      * Create a new mock function response
-     * @param  {FunctionResponseProperties} options the options for the response
+     * @param  {ResponseProperties} options the options for the response
      */
-    constructor(options?: FunctionResponseProperties) {
+    constructor(options?: ResponseProperties) {
         // if the options are udndefined set it to an empty object
         if (options === undefined) { options = {}; }
         // if there are both expected success and error raise an error
@@ -76,4 +76,35 @@ export class MockFunctionResponse implements Parse.Cloud.FunctionResponse {
             expect(message).to.equal(this.expectedError);
         }
     }
+};
+
+// the response for a cloud function call
+export class MockFunctionResponse
+extends MockResponse
+implements Parse.Cloud.FunctionResponse {
+
+};
+
+// the trigger before an object is saved
+export class MockBeforeSaveResponse
+extends MockResponse
+implements Parse.Cloud.FunctionResponse {
+
+};
+
+// the trigger before an object is deleted
+export class MockBeforeDeleteResponse
+extends MockResponse
+implements Parse.Cloud.BeforeDeleteResponse {
+
+    /**
+     * Mark the object as approved for deletion. No parameters
+     */
+    success() {
+        // guard that an error isn't expected
+        if (this.expectedError !== undefined) {
+            expect.fail('called success when expecting an error');
+        }
+    }
+
 };

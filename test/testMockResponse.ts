@@ -1,16 +1,14 @@
 import {expect} from 'chai';
 import * as Parse from 'parse/node';
-import {Mock} from '../src';
-// import the specific class for convenience.
-import FunctionResponse = Mock.FunctionResponse;
+import {MockResponse} from '../src/MockResponse';
 
-describe('Mock.FunctionResponse.constructor()', () => {
+describe('Mock.MockResponse.constructor()', () => {
 
     it('should initialize a response with no parameters', () => {
-        var entity: FunctionResponse;
+        var entity: MockResponse;
         // the function that will attempt to instantiate the response
         var attemptToInitialize = () => {
-            entity = new FunctionResponse();
+            entity = new MockResponse();
         };
         expect(attemptToInitialize).to.not.throw(Error);
         expect(entity.isUsingDeepEquals).to.equal(true);
@@ -19,10 +17,10 @@ describe('Mock.FunctionResponse.constructor()', () => {
     });
 
     it('should initialize a response with "isUsingDeepEquals" parameter', () => {
-        var entity: FunctionResponse;
+        var entity: MockResponse;
         // the function that will attempt to instantiate the response
         var attemptToInitialize = () => {
-            entity = new FunctionResponse({
+            entity = new MockResponse({
                 isUsingDeepEquals: false
             });
         };
@@ -33,10 +31,10 @@ describe('Mock.FunctionResponse.constructor()', () => {
     });
 
     it('should initialize a response with "expectedError" parameter', () => {
-        var entity: FunctionResponse;
+        var entity: MockResponse;
         // the function that will attempt to instantiate the response
         var attemptToInitialize = () => {
-            entity = new FunctionResponse({
+            entity = new MockResponse({
                 expectedError: 'arb'
             });
         };
@@ -47,10 +45,10 @@ describe('Mock.FunctionResponse.constructor()', () => {
     });
 
     it('should initialize a response with "expectedSuccess" parameter', () => {
-        var entity: FunctionResponse;
+        var entity: MockResponse;
         // the function that will attempt to instantiate the response
         var attemptToInitialize = () => {
-            entity = new FunctionResponse({
+            entity = new MockResponse({
                 expectedSuccess: {
                     foo: 'bar'
                 }
@@ -63,10 +61,10 @@ describe('Mock.FunctionResponse.constructor()', () => {
     });
 
     it('should raise an error when "expectedSuccess" & "expectedError" are both set', () => {
-        var entity: FunctionResponse;
+        var entity: MockResponse;
         // the function that will attempt to instantiate the response
         var attemptToInitialize = () => {
-            entity = new FunctionResponse({
+            entity = new MockResponse({
                 expectedError: 'arb',
                 expectedSuccess: {
                     foo: 'bar'
@@ -78,10 +76,10 @@ describe('Mock.FunctionResponse.constructor()', () => {
 
 });
 
-describe('(Mock.FunctionResponse).error()', () => {
+describe('(Mock.MockResponse).error()', () => {
 
     it('shouldnt fail by default', () => {
-        var entity = new FunctionResponse();
+        var entity = new MockResponse();
         var tryError = () => {
             entity.error();
         };
@@ -89,7 +87,7 @@ describe('(Mock.FunctionResponse).error()', () => {
     });
 
     it('shouldnt fail when expectedError is set and passed in', () => {
-        var entity = new FunctionResponse({
+        var entity = new MockResponse({
             expectedError: 'arb'
         });
 
@@ -100,7 +98,7 @@ describe('(Mock.FunctionResponse).error()', () => {
     });
 
     it('should fail when expectedError is set and a different error is passed in', () => {
-        var entity = new FunctionResponse({
+        var entity = new MockResponse({
             expectedError: 'arb'
         });
 
@@ -111,7 +109,7 @@ describe('(Mock.FunctionResponse).error()', () => {
     });
 
     it('should fail when expectedSuccess is set', () => {
-        var entity = new FunctionResponse({
+        var entity = new MockResponse({
             expectedSuccess: 'arb'
         });
 
@@ -123,10 +121,10 @@ describe('(Mock.FunctionResponse).error()', () => {
 
 });
 
-describe('(Mock.FunctionResponse).success()', () => {
+describe('(Mock.MockResponse).success()', () => {
 
     it('shouldnt fail by default', () => {
-        var entity = new FunctionResponse();
+        var entity = new MockResponse();
         var trySuccess = () => {
             entity.success();
         };
@@ -134,7 +132,7 @@ describe('(Mock.FunctionResponse).success()', () => {
     });
 
     it('shouldnt fail when expectedSuccess is set and passed in', () => {
-        var entity = new FunctionResponse({
+        var entity = new MockResponse({
             expectedSuccess: 'arb'
         });
 
@@ -145,7 +143,7 @@ describe('(Mock.FunctionResponse).success()', () => {
     });
 
     it('should fail when expectedSuccess is set and a different error is passed in', () => {
-        var entity = new FunctionResponse({
+        var entity = new MockResponse({
             expectedSuccess: 'arb'
         });
 
@@ -156,7 +154,7 @@ describe('(Mock.FunctionResponse).success()', () => {
     });
 
     it('should fail when expectedError is set', () => {
-        var entity = new FunctionResponse({
+        var entity = new MockResponse({
             expectedError: 'arb'
         });
 
@@ -167,7 +165,7 @@ describe('(Mock.FunctionResponse).success()', () => {
     });
 
     it('should use deep equals', () => {
-        var entity = new FunctionResponse({
+        var entity = new MockResponse({
             expectedSuccess: {
                 foo: 'bar'
             }
@@ -182,7 +180,7 @@ describe('(Mock.FunctionResponse).success()', () => {
     });
 
     it('should not use deep equals', () => {
-        var entity = new FunctionResponse({
+        var entity = new MockResponse({
             isUsingDeepEquals: false,
             expectedSuccess: {
                 foo: 'bar'
