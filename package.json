@@ -1,42 +1,47 @@
 {
-  "name": "parse-server-mock-requests",
-  "version": "0.1.0",
-  "description": "a class for mocking requests and responses in parse servers",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Kautenja/parse-server-mock.git"
-  },
-  "scripts": {
-    "test": "mocha test",
-    "test:cover": "nyc mocha",
-    "doc": "typedoc . --mode modules --out ./docs"
-  },
-  "keywords": [
-    "parse-server",
-    "parse",
-    "mock",
-    "requests",
-    "responses"
-  ],
-  "author": "Christian Kauten <kautencreations@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "parse": "^1.9.2",
-    "chai": "^3.5.0"
-  },
-  "devDependencies": {
-    "@types/chai": "^3.5.2",
-    "@types/mocha": "^2.2.41",
-    "@types/node": "^7.0.21",
-    "@types/parse": "^1.9.0",
-    "mocha": "^3.4.1",
-    "nyc": "^10.3.2",
-    "typedoc": "^0.7.1",
-    "typescript": "^2.3.2",
-    "typings": "^2.1.1"
-  },
-  "engines": {
-    "node": ">=4.6"
-  }
+    "name": "parse-server-mock-requests",
+    "version": "0.1.0",
+    "description": "a class for mocking requests and responses in parse servers",
+    "main": "index.js",
+    "types": "index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Kautenja/parse-server-mock.git"
+    },
+    "scripts": {
+        "test": "mocha test",
+        "test:cover": "nyc mocha",
+        "doc": "typedoc . --mode modules --out ./docs"
+    },
+    "keywords": [
+        "parse-server",
+        "parse",
+        "mock",
+        "requests",
+        "responses"
+    ],
+    "author": "Christian Kauten <kautencreations@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Kautenja/arse-server-mock/issues"
+    },
+    "homepage": "https://github.com/Kautenja/arse-server-mock#readme",
+    "dependencies": {
+        "parse": "^1.9.2",
+        "chai": "^3.5.0"
+    },
+    "devDependencies": {
+        "@types/chai": "^3.5.2",
+        "@types/mocha": "^2.2.41",
+        "@types/node": "^7.0.21",
+        "@types/parse": "^1.9.0",
+        "mocha": "^3.4.1",
+        "nyc": "^10.3.2",
+        "typedoc": "^0.7.1",
+        "typescript": "^2.3.2",
+        "typings": "^2.1.1"
+    },
+    "engines": {
+        "node": ">=4.6"
+    }
 }
